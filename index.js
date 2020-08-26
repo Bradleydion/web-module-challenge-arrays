@@ -122,7 +122,7 @@ for (i=0; i< array.length ; i++ ){
 }
  return array;
 }
-removeFlavorByName(originalFlavors, "Vanilla")
+// removeFlavorByName(originalFlavors, "Vanilla")
 console.log(originalFlavors)
 
 
@@ -136,7 +136,7 @@ and should return a new array that is identical to the old array. You can name t
 let oGlist = []
 function copy(array){
     for (i=0; i< array.length ; i++ ){
-        
+        oGlist.push(array[i])
     }
 
    
@@ -157,16 +157,23 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
-
-function filterByWord( array, index){
+const filteredList =[];
+function filterByWord( array, string){
     // new list created to be the filtered list
-    const filteredList =[];
-   
+        for (i=0; i< array.length ; i++ ){
+            if( array[i].includes(string)){
+              filteredList.push(array[i])
+            }
+           
+        }
+        }
+        filterByWord(oGlist, "Chocolate")
+        console.log(filteredList)
     // mimic line 117
     // if statement, if the index appears in the array push to filtered list
     // may need to return
 
-}
+
 
 
 
